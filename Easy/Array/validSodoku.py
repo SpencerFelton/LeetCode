@@ -12,19 +12,19 @@ class Solution:
             row_dict = {}
             col_dict = {}
 
-            for y in range(0,9):
+            for y in range(0,9): # row check
                 if board[x][y] not in row_dict:
                     row_dict[board[x][y]] = 1
                 else:
                     row_dict[board[x][y]] += 1
 
-            for z in range(0, 9):
+            for z in range(0, 9): # column check
                 if board[z][x] not in col_dict:
                     col_dict[board[z][x]] = 1
                 else:
                     col_dict[board[z][x]] += 1
 
-            for i in range(0, 9):
+            for i in range(0, 9): # 3x3 square check
                 if board[x][i] not in square_dicts[(x//3)*3 + i//3]:
                     square_dicts[(x//3)*3 + i//3][board[x][i]] = 1
                 else:
