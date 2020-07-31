@@ -2,9 +2,8 @@ class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
-
         """
-        num_zeroes = 0
+        num_zeroes = 0 #initialise num_zeroes to equal 0
         n = len(nums)
         for z in range(0, n):
             if(nums[z] == 0):
@@ -18,4 +17,3 @@ class Solution:
                         nums[x] = nums[y]
                         nums[y] = temp
                         break
-            
